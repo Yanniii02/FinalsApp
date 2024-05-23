@@ -7,6 +7,7 @@
     <%= render bus %>
     <p>
       <%= link_to "Show this bus", bus %>
+      <%= button_to "Destroy", bus, method: :delete, data: { confirm: "Are you sure?" } %>
     </p>
   <% end %>
 </div>

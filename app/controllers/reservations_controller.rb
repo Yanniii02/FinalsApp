@@ -8,6 +8,9 @@ class ReservationsController < ApplicationController
 
   # GET /reservations/1 or /reservations/1.json
   def show
+    @reservation = Reservation.find(params[:id])
+    @trip = @reservation.trip
+    @bus = @trip.bus
   end
 
   # GET /reservations/new

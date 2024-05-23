@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_23_101730) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_23_102614) do
   create_table "buses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "body_number"
     t.string "plate_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "passengers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "contact_number"
+    t.string "email_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

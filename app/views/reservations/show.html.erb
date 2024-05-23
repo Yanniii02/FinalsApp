@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @reservation %>
+<div>
+  <p><strong>Reservation ID:</strong> <%= @reservation.id %></p>
+  <p><strong>Reservation Date:</strong> <%= @reservation.created_at %></p>
+</div>
 
 <div>
   <%= link_to "Edit this reservation", edit_reservation_path(@reservation) %> |

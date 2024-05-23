@@ -13,12 +13,12 @@
 
   <div>
     <%= form.label :passenger_id, style: "display: block" %>
-    <%= form.text_field :passenger_id %>
+    <%= form.collection_select :passenger_id, Passenger.all, :id, :name, { prompt: "Select a passenger" }, { class: "form-control" } %>
   </div>
 
   <div>
     <%= form.label :trip_id, style: "display: block" %>
-    <%= form.text_field :trip_id %>
+    <%= form.collection_select :trip_id, Trip.all, :id, :origin_and_destination, { prompt: "Select a trip" }, { class: "form-control" } %>
   </div>
 
   <div>

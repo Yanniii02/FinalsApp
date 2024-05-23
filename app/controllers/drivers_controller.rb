@@ -13,6 +13,7 @@ class DriversController < ApplicationController
   # GET /drivers/new
   def new
     @driver = Driver.new
+    @buses = Bus.all
   end
 
   # GET /drivers/1/edit

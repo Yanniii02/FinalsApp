@@ -43,7 +43,7 @@
 
   <div>
     <%= form.label :bus_id, style: "display: block" %>
-    <%= form.text_field :bus_id %>
+    <%= form.collection_select :bus_id, Bus.all, :id, :plate_number, { prompt: "Select a bus" }, { class: "form-control" } %>
   </div>
 
   <div>

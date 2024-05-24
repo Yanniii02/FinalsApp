@@ -1,7 +1,7 @@
-class CreateBuses < ActiveRecord::Migration[7.1]
+class CreateBuses < ActiveRecord::Migration[6.0]
   def change
     create_table :buses do |t|
-      t.integer :body_number
+      t.string :bus_number
       t.string :plate_number
 
       t.timestamps

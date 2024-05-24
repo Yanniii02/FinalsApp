@@ -1,0 +1,18 @@
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.0/ext/racc/cparse
+/home/simon/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-tbekv7 sitelibdir\=./.gem.20240524-9518-tbekv7 clean
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-tbekv7 sitelibdir\=./.gem.20240524-9518-tbekv7
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-tbekv7 sitelibdir\=./.gem.20240524-9518-tbekv7 install
+/usr/bin/install -m 0755 cparse.so ./.gem.20240524-9518-tbekv7/racc
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/racc-1.8.0/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-tbekv7 sitelibdir\=./.gem.20240524-9518-tbekv7 clean

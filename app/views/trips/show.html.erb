@@ -1,10 +1,48 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @trip %>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<p>Trip was successfully created.</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @trip.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @trip.destination %>
+</p>
+
+<p>
+  <strong>Number of passengers:</strong>
+  <%= @trip.number_of_passengers %>
+</p>
+
+<p>
+  <strong>Unit fare:</strong>
+  <%= number_to_currency(@trip.unit_fare, unit: '') %>
+</p>
+
+<p>
+  <strong>Total fare:</strong>
+  <%= number_to_currency(@trip.total_fare, unit: '') %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @trip.bus.bus_number %>
+</p>
 
 <div>
+  <%= link_to "Show this trip", @trip %> |
+  <%= link_to "Back to trips", trips_path %> |
   <%= link_to "Edit this trip", edit_trip_path(@trip) %> |
-  <%= link_to "Back to trips", trips_path %>
-
-  <%= button_to "Destroy this trip", @trip, method: :delete %>
+  <%= button_to "Destroy this trip", @trip, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

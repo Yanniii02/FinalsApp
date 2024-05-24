@@ -1,10 +1,29 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @driver %>
+
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<p>Driver was successfully created.</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @driver.name %>
+</p>
+
+<p>
+  <strong>Contact number:</strong>
+  <%= @driver.contact_number %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @driver.bus.bus_number %>
+</p>
 
 <div>
+  <%= link_to "Show this driver", @driver %> |
+  <%= link_to "Back to drivers", drivers_path %> |
   <%= link_to "Edit this driver", edit_driver_path(@driver) %> |
-  <%= link_to "Back to drivers", drivers_path %>
-
-  <%= button_to "Destroy this driver", @driver, method: :delete %>
+  <%= button_to "Destroy this driver", @driver, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

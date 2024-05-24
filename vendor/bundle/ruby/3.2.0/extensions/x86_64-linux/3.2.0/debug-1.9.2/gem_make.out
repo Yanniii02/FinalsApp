@@ -1,0 +1,19 @@
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+/home/simon/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-mu1vkr sitelibdir\=./.gem.20240524-9518-mu1vkr clean
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-mu1vkr sitelibdir\=./.gem.20240524-9518-mu1vkr
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-mu1vkr sitelibdir\=./.gem.20240524-9518-mu1vkr install
+/usr/bin/install -m 0755 debug.so ./.gem.20240524-9518-mu1vkr/debug
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/debug-1.9.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-mu1vkr sitelibdir\=./.gem.20240524-9518-mu1vkr clean

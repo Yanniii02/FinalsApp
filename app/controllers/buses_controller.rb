@@ -67,6 +67,6 @@ class BusesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bus_params
-      params.require(:bus).permit(:bus_number, :plate_number, :other_attributes)
+      params.require(:bus).permit(:bus_number, :plate_number, :other_attributes, :image)
     end
 end

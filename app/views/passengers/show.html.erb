@@ -1,17 +1,58 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @passenger %>
+<!-- Passenger Details -->
+<h2>Passenger Details</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @passenger.name %>
+</p>
+<p>
+  <strong>Contact Number:</strong>
+  <%= @passenger.contact_number %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @passenger.email_address %>
+</p>
 
-<div>
-  <%= link_to "Edit this passenger", edit_passenger_path(@passenger) %> |
-  <%= link_to "Back to passengers", passengers_path %>
+<!-- Trips Table -->
+<h2>Trips</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Schedule</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Bus Plate Number</th>
+      <th>Drivers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @passenger.trips.each do |trip| %>
+      <tr>
+        <td><%= trip.schedule %></td>
+        <td><%= trip.origin %></td>
+        <td><%= trip.destination %></td>
+        <td><%= trip.bus.plate_number %></td>
+        <td><%= trip.bus.drivers.pluck(:name).join(", ") %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-  <%= button_to "Destroy this passenger", @passenger, method: :delete %>
-</div>
-
+<!-- Display Image -->
 <% if @passenger.image.attached? %>
   <p>
     <strong>Image:</strong>
     <%= image_tag rails_blob_path(@passenger.image) %>
   </p>
+
+
+<!-- Navigation Links -->
+<div>
+  <%= link_to "Edit this passenger", edit_passenger_path(@passenger) %> |
+  <%= link_to "Back to passengers", passengers_path %>
+  <%= button_to "Destroy this passenger", @passenger, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
 <% end %>

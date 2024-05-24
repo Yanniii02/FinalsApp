@@ -29,6 +29,7 @@
   <div>
     <%= form.label :number_of_passengers, style: "display: block" %>
     <%= form.number_field :number_of_passengers %>
+    <%= puts "Number of passengers: #{trip.number_of_passengers}" %>
   </div>
 
   <div>
@@ -44,6 +45,10 @@
   <div>
     <%= form.label :bus_id, style: "display: block" %>
     <%= form.collection_select :bus_id, Bus.all, :id, :plate_number, { prompt: "Select a bus" }, { class: "form-control" } %>
+  </div>
+
+  <div>
+    <%= puts "Number of passengers: #{trip.number_of_passengers}" %>
   </div>
 
   <div>

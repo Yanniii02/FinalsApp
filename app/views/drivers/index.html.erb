@@ -7,6 +7,7 @@
     <%= render driver %>
     <p>
       <%= link_to "Show this driver", driver %>
+      <%= button_to "Destroy", driver, method: :delete, data: { confirm: "Are you sure?" } %>
     </p>
   <% end %>
 </div>

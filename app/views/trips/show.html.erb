@@ -7,7 +7,11 @@
 
 <p>
   <strong>Schedule:</strong>
-  <%= @trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %>
+  <% if @trip.schedule.present? %>
+    <%= @trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %>
+  <% else %>
+    N/A
+  <% end %>
 </p>
 
 <p>

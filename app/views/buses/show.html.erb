@@ -15,6 +15,14 @@
     <strong>Plate number:</strong>
     <%= @bus.plate_number %>
   </p>
+
+  <% if @bus.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag rails_blob_path(@bus.image) %>
+  </p>
+<% end %>
+  
 </div>
 
 <div>

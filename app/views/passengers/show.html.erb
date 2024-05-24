@@ -8,3 +8,10 @@
 
   <%= button_to "Destroy this passenger", @passenger, method: :delete %>
 </div>
+
+<% if @passenger.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag rails_blob_path(@passenger.image) %>
+  </p>
+<% end %>

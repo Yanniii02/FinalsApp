@@ -21,6 +21,13 @@
   <%= @driver.bus.bus_number %>
 </p>
 
+<% if @driver.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag rails_blob_path(@driver.image) %>
+  </p>
+<% end %>
+
 <div>
   <%= link_to "Show this driver", @driver %> |
   <%= link_to "Back to drivers", drivers_path %> |

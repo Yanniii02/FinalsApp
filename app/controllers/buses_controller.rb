@@ -1,5 +1,7 @@
+# app/controllers/buses_controller.rb
+
 class BusesController < ApplicationController
-  before_action :set_bus, only: %i[ show edit update destroy ]
+  before_action :set_bus, only: [:show, :edit, :update, :destroy]
 
   # GET /buses or /buses.json
   def index
@@ -49,7 +51,7 @@ class BusesController < ApplicationController
 
   # DELETE /buses/1 or /buses/1.json
   def destroy
-    @bus.destroy!
+    @bus.destroy
 
     respond_to do |format|
       format.html { redirect_to buses_url, notice: "Bus was successfully destroyed." }
@@ -65,6 +67,6 @@ class BusesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bus_params
-      params.require(:bus).permit(:body_number, :plate_number, :other_attributes)
+      params.require(:bus).permit(:bus_number, :plate_number, :other_attributes)
     end
 end

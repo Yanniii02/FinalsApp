@@ -1,0 +1,22 @@
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+/home/simon/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-b9o2lx sitelibdir\=./.gem.20240524-9518-b9o2lx clean
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-b9o2lx sitelibdir\=./.gem.20240524-9518-b9o2lx
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-b9o2lx sitelibdir\=./.gem.20240524-9518-b9o2lx install
+/usr/bin/install -m 0755 bootsnap.so ./.gem.20240524-9518-b9o2lx/bootsnap
+
+current directory: /home/simon/FinalsApp/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.18.3/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20240524-9518-b9o2lx sitelibdir\=./.gem.20240524-9518-b9o2lx clean

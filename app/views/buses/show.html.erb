@@ -1,10 +1,24 @@
-<p style="color: green"><%= notice %></p>
 
-<%= render @bus %>
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<p>Bus was successfully created.</p>
+
+<div id="<%= dom_id @bus %>">
+  <p>
+    <strong>Bus number:</strong>
+    <%= @bus.bus_number %>
+  </p>
+
+  <p>
+    <strong>Plate number:</strong>
+    <%= @bus.plate_number %>
+  </p>
+</div>
 
 <div>
   <%= link_to "Edit this bus", edit_bus_path(@bus) %> |
-  <%= link_to "Back to buses", buses_path %>
-
-  <%= button_to "Destroy this bus", @bus, method: :delete %>
+  <%= link_to "Back to buses", buses_path %> |
+  <%= button_to "Destroy this bus", @bus, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

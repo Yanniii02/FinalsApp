@@ -2,14 +2,43 @@
 
 <h1>Trips</h1>
 
-<div id="trips">
-  <% @trips.each do |trip| %>
-    <%= render trip %>
-    <p>
-      <%= link_to "Show this trip", trip %>
-      <%= button_to "Destroy", trip, method: :delete, data: { confirm: "Are you sure?" } %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Schedule</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Number of Passengers</th>
+      <th>Unit Fare</th>
+      <th>Total Fare</th>
+      <th>Bus Number</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr>
+        <td>
+          <% if trip.schedule.present? %>
+            <%= trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %>
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td><%= trip.origin %></td>
+        <td><%= trip.destination %></td>
+        <td><%= trip.number_of_passengers %></td>
+        <td><%= number_to_currency(trip.unit_fare, unit: '') %></td>
+        <td><%= number_to_currency(trip.total_fare, unit: '') %></td>
+        <td><%= trip.bus.bus_number if trip.bus %></td>
+        <td>
+          <%= link_to "Show", trip %>
+          <%= link_to "Edit", edit_trip_path(trip) %>
+          <%= button_to "Destroy", trip, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New trip", new_trip_path %>
+<%= link_to "New Trip", new_trip_path %>

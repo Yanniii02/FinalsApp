@@ -4,8 +4,8 @@
   <p style="color: green"><%= notice %></p>
 <% end %>
 
-<p>Driver was successfully created.</p>
-
+<p></p>
+<h2>Driver Information</h2>
 <p>
   <strong>Name:</strong>
   <%= @driver.name %>
@@ -27,6 +27,30 @@
     <%= image_tag rails_blob_path(@driver.image) %>
   </p>
 <% end %>
+
+<h2>Bus Information</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Bus Number</th>
+      <th>Plate Number</th>
+      <!-- Add additional headers for bus details if needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <% if @driver.bus %>
+      <tr>
+        <td><%= @driver.bus.bus_number %></td>
+        <td><%= @driver.bus.plate_number %></td>
+        <!-- Add additional columns for bus details if needed -->
+      </tr>
+    <% else %>
+      <tr>
+        <td colspan="2">No assigned bus</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Show this driver", @driver %> |

@@ -1,15 +1,70 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* custom.css */
+
+table {
+    border-collapse: collapse;  
+    margin-bottom: 20px;
+}
+  
+table, th, td {
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid rgb(240, 7, 7);
+    padding: 10px;
+}
+
+.header {
+    background-color: #141cb8a9;
+    font-weight: bold;
+}
+
+.items-show {
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px; 
+    }
+    
+    strong {
+        width: 150px; 
+        margin-right: 10px; 
+    }
+}
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    height: 50px;
+    padding: 20px;
+    background-color: rgb(136, 11, 11);
+    background-image: url();
+    img {
+        max-width: 50%; 
+    }
+}
+.main-container{
+    background-color: rgb(24, 3, 3);
+    height: 100%;
+    padding: 30px;
+}
+
+
+.main-header h1 {
+    font-size: 24px; 
+    margin: 0; 
+}
+
+.main-header p {
+    font-size: 16px; 
+    margin: 10px 0; 
+}
+
+
+.main-container {
+    background-color: #ffffff; 
+    height: 100%;
+    padding: 30px;
+    border: 2px solid #318387; 
+}

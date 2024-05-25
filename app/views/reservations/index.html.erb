@@ -1,25 +1,34 @@
 <p style="color: green"><%= notice %></p>
+
+
+<h1>Reservations</h1>
 <table>
   <thead>
     <tr>
-      <th>Trip Information</th>
-      <th>Bus Details</th>
-      <th>Driver(s)</th>
-      <th>Passenger</th>
+      <th>Passenger Name</th>
+      <th>Trip Schedule</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.passenger.name %></td>
+        <td>
+          <% if reservation.trip.schedule.present? %>
+            <%= reservation.trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %> - <%= reservation.trip.origin %> to <%= reservation.trip.destination %>
+          <% else %>
+            N/A
+          <% end %>
+        </td>
+        <td>
+          <%= link_to "Show", reservation %>
+          <%= link_to "Edit", edit_reservation_path(reservation) %>
+          <%= button_to "Destroy", reservation, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<h1>Reservations</h1>
-
-<div id="reservations">
-  <% @reservations.each do |reservation| %>
-    <%= render reservation %>
-    <p>
-      <%= link_to "Show this reservation", reservation %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New reservation", new_reservation_path %>
+<%= link_to "New Reservation", new_reservation_path %>

@@ -1,70 +1,65 @@
-* custom.css */
-
-table {
-    border-collapse: collapse;  
-    margin-bottom: 20px;
-}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#000000;
+    background-color: #a5d6f7; /* Blue background */
+  }
   
-table, th, td {
-    font-family: 'Courier New', Courier, monospace;
-    border: 1px solid rgb(240, 7, 7);
-    padding: 10px;
-}
-
-.header {
-    background-color: #141cb8a9;
-    font-weight: bold;
-}
-
-.items-show {
-    padding-top: 10px;
-    font-family: 'Times New Roman', Times, serif;
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 5px; 
-    }
+  header {
+    background-image: url('/assets/images/BUS.png');
+    background-size: fill; /* Adjusted to 50% */
+    background-position: center;
+    color: #fff;
+    padding: 0px 0px;   
     
-    strong {
-        width: 150px; 
-        margin-right: 10px; 
-    }
-}
-.main-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 97%;
-    height: 50px;
+  }
+  
+  table {
+    width: 80%; /* Adjusted width to be 80% of the viewport */
+    margin: 40px auto; /* Centering the table horizontally */
+    border-collapse: collapse;
+  }
+  
+  table thead th {
+    color: rgb(0, 0, 0);
+    text-align: left;
     padding: 20px;
-    background-color: rgb(136, 11, 11);
-    background-image: url();
-    img {
-        max-width: 50%; 
-    }
-}
-.main-container{
-    background-color: rgb(24, 3, 3);
-    height: 100%;
-    padding: 30px;
-}
-
-
-.main-header h1 {
-    font-size: 24px; 
-    margin: 0; 
-}
-
-.main-header p {
-    font-size: 16px; 
-    margin: 10px 0; 
-}
-
-
-.main-container {
-    background-color: #ffffff; 
-    height: 100%;
-    padding: 30px;
-    border: 2px solid #318387; 
-}
+    font-family: Arial, sans-serif; /* Use Arial font for consistency */
+    font-size: 20px;
+    font-display: rgb(0, 0, 0);
+    border-bottom: 5px solid #dddddd;
+  }
+  
+  tbody td {
+    border-bottom: 5px solid #000000;
+    padding: 10px;
+    font-family: Arial, sans-serif; /* Use Arial font for consistency */
+  }
+  
+  table tbody tr:nth-of-type(even) {
+    background-color: #E9EDED;
+  }
+  
+  table tbody tr:nth-of-type(odd) {
+    background-color: #FFFFFF;
+  }
+  
+  .new-passenger-button {
+    background-color: #6e9cc4;  /* Dark background color */
+    color: white;               /* White text */
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .new-passenger-button:hover {
+    transform: scale(1.03); 
+    background-color: #CEA60A;  /* Optional: Change background color on hover */
+  }

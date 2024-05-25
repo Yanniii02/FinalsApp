@@ -2,14 +2,30 @@
 
 <h1>Drivers</h1>
 
-<div id="drivers">
-  <% @drivers.each do |driver| %>
-    <%= render driver %>
-    <p>
-      <%= link_to "Show this driver", driver %>
-      <%= button_to "Destroy", driver, method: :delete, data: { confirm: "Are you sure?" } %>
-    </p>
-  <% end %>
-</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact Number</th>
+      <th>Bus Number</th>
+      <th>Trips Count</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.contact_number %></td>
+        <td><%= driver.bus&.bus_number %></td>
+        <td><%= driver.bus&.trips&.count || 0 %></td>
+        <td>
+          <%= link_to "Show", driver %>
+          <%= button_to "Destroy", driver, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New driver", new_driver_path %>
+<%= link_to "New Driver", new_driver_path %>

@@ -3,7 +3,8 @@
   <p style="color: green"><%= notice %></p>
 <% end %>
 
-<p>Trip was successfully created.</p>
+<p></p>
+<h2>Trip Information</h2>
 
 <p>
   <strong>Schedule:</strong>
@@ -43,6 +44,60 @@
   <strong>Bus:</strong>
   <%= @trip.bus.bus_number %>
 </p>
+
+<h2>Bus Details</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Bus Number</th>
+      <th>Plate Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @trip.bus.bus_number %></td>
+      <td><%= @trip.bus.plate_number %></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Driver(s)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trip.bus.drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.contact_number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Passengers</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact Number</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trip.passengers.each do |passenger| %>
+      <tr>
+        <td><%= passenger.name %></td>
+        <td><%= passenger.contact_number %></td>
+        <td><%= passenger.email_address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Show this trip", @trip %> |

@@ -3,7 +3,9 @@
   <p style="color: green"><%= notice %></p>
 <% end %>
 
-<p>Bus was successfully created.</p>
+<p></p>
+
+<h2>Bus Information</h2>
 
 <div id="<%= dom_id @bus %>">
   <p>
@@ -22,8 +24,50 @@
     <%= image_tag rails_blob_path(@bus.image) %>
   </p>
 <% end %>
+
+<h2>Trips</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Schedule</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Number of Passengers</th>
+      <th>Unit Fare</th>
+      <th>Total Fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bus.trips.each do |trip| %>
+      <tr>
+        <td><%= trip.schedule.strftime("%m/%d/%Y, %I:%M %p") %></td>
+        <td><%= trip.origin %></td>
+        <td><%= trip.destination %></td>
+        <td><%= trip.number_of_passengers %></td>
+        <td><%= number_to_currency(trip.unit_fare, unit: '') %></td>
+        <td><%= number_to_currency(trip.total_fare, unit: '') %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
   
-</div>
+<h2>Driver(s)</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bus.drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.contact_number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <div>
   <%= link_to "Edit this bus", edit_bus_path(@bus) %> |

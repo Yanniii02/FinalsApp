@@ -2,14 +2,36 @@
 
 <h1>Buses</h1>
 
-<div id="buses">
-  <% @buses.each do |bus| %>
-    <%= render bus %>
-    <p>
-      <%= link_to "Show this bus", bus %>
-      <%= button_to "Destroy", bus, method: :delete, data: { confirm: "Are you sure?" } %>
-    </p>
-  <% end %>
-</div>
 
-<%= link_to "New bus", new_bus_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bus Number</th>
+      <th>Plate Number</th>
+      <th>Assigned Drivers</th>
+      <th>Trips Count</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @buses.each do |bus| %>
+      <tr>
+        <td><%= bus.bus_number %></td>
+        <td><%= bus.plate_number %></td>
+        <td>
+          <% bus.drivers.each do |driver| %>
+            <%= driver.name %><br>
+          <% end %>
+        </td>
+        <td><%= bus.trips.count %></td>
+        <td>
+          <%= link_to "Show", bus %>
+          <%= button_to "Destroy", bus, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Bus", new_bus_path %>

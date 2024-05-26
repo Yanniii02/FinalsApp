@@ -23,24 +23,27 @@ body {
 
   table {
     width: 80%; /* Adjusted width to be 80% of the viewport */
-    margin: 40px auto; /* Centering the table horizontally */
+    margin: 50px auto; /* Centering the table horizontally */
     border-collapse: collapse;
   }
   
   table thead th {
-    color: rgb(0, 0, 0);
+    color: rgb(233, 225, 225);
+    background-color: rgb(44, 27, 143);
     text-align: left;
-    padding: 20px;
+    padding: 10px;
     font-family: Arial, sans-serif; /* Use Arial font for consistency */
     font-size: 20px;
     font-display: rgb(0, 0, 0);
-    border-bottom: 5px solid #dddddd;
+    border: 1px solid black;
   }
+
   
   tbody td {
     border-bottom: 5px solid #000000;
     padding: 10px;
-    font-family: Arial, sans-serif; /* Use Arial font for consistency */
+    font-family: Arial, sans-serif; 
+    border: 1px solid black;
   }
   
   table tbody tr:nth-of-type(even) {
@@ -52,20 +55,96 @@ body {
   }
   
   .new-passenger-button {
-    background-color: #6e9cc4;  /* Dark background color */
+    background-color: rgb(44, 27, 143);  /* Dark background color */
     color: white;               /* White text */
     padding: 12px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 4px;
+    margin: 4px 192px;
     transition-duration: 0.2s;
     cursor: pointer;
     border-radius: 12px;
   }
   
   .new-passenger-button:hover {
+    transform: scale(1.03); 
+    background-color: #CEA60A;  /* Optional: Change background color on hover */
+  }
+
+  .new-bus-button {
+    background-color: rgb(44, 27, 143);  /* Dark background color */
+    color: white;               /* White text */
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 192px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .new-bus-button:hover {
+    transform: scale(1.03); 
+    background-color: #CEA60A;  /* Optional: Change background color on hover */
+  }
+
+  .new-driver-button {
+    background-color: rgb(44, 27, 143);  /* Dark background color */
+    color: white;               /* White text */
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 192px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .new-driver-button:hover {
+    transform: scale(1.03); 
+    background-color: #CEA60A;  /* Optional: Change background color on hover */
+  }
+
+  .new-trip-button {
+    background-color: rgb(44, 27, 143);  /* Dark background color */
+    color: white;               /* White text */
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 192px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .new-trip-button:hover {
+    transform: scale(1.03); 
+    background-color: #CEA60A;  /* Optional: Change background color on hover */
+  }
+
+  .new-reservation-button {
+    background-color: rgb(44, 27, 143);  /* Dark background color */
+    color: white;               /* White text */
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 192px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .new-reservation-button:hover {
     transform: scale(1.03); 
     background-color: #CEA60A;  /* Optional: Change background color on hover */
   }

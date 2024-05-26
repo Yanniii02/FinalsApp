@@ -27,6 +27,7 @@
         <td><%= bus.trips.count %></td>
         <td>
           <%= link_to "Show", bus %>
+          <%= link_to "Edit", edit_bus_path(bus) %>
           <%= button_to "Destroy", bus, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>

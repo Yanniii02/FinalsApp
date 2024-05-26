@@ -21,6 +21,7 @@
         <td><%= passenger.trips.count %></td>
         <td>
           <%= link_to "Show", passenger %>
+          <%= link_to "Edit", edit_passenger_path(passenger) %>
           <%= button_to "Destroy", passenger, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>

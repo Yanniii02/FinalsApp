@@ -15,6 +15,12 @@
   <%= @passenger.email_address %>
 </p>
 
+<% if @passenger.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag rails_blob_path(@passenger.image) %>
+  </p>
+
 <!-- Trips Table -->
 <h2>Trips</h2>
 <table>
@@ -39,14 +45,6 @@
     <% end %>
   </tbody>
 </table>
-
-<!-- Display Image -->
-<% if @passenger.image.attached? %>
-  <p>
-    <strong>Image:</strong>
-    <%= image_tag rails_blob_path(@passenger.image) %>
-  </p>
-
 
 <!-- Navigation Links -->
 <div>
